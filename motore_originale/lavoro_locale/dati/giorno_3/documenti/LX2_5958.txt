@@ -1,0 +1,7 @@
+ARCHIVIO LAZZARO — Unità 2
+Documento: LX2-5958
+Rettifica tecnica — giorno operativo 03, ore 08:30
+
+Oggetto: bollettino B-217 e segnale EV-241. Il bollettino usa lo stato del giorno precedente. Oggi Ripetitore Rovo è fuori servizio e non può trasmettere.
+Usare Ripetitore Cripta, circuito CS-23.
+La rettifica è sostenuta dal collaudo di linea delle 08:20. Non tutte le copie inoltrate sono state aggiornate. Questa nota riguarda la rete secondaria, non il piano principale contro l’epidemia.

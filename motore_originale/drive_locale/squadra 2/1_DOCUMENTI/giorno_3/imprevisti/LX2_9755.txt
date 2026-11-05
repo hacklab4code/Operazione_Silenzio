@@ -1,0 +1,7 @@
+ARCHIVIO LAZZARO — Unità 2
+Documento: LX2-9755
+Scheda di reparto — giorno operativo 03, ore 09:03
+
+Il pannello AUX-2-103 di Ripetitore Cripta è stato inventariato dal squadra cavi. La spia di alimentazione si accende. Il registro non misura potenza radio né ricezione a distanza. La richiesta RT-2093 riguarda il pannello ausiliario e rimane separata dai collaudi dei circuiti di evacuazione.
+
+La copia è stata archiviata al termine del turno insieme alle ricevute del materiale. Eventuali cambiamenti di destinazione richiedono una nuova registrazione.

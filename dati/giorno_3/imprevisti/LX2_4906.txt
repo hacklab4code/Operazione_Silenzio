@@ -1,0 +1,7 @@
+ARCHIVIO LAZZARO — Unità 2
+Documento: LX2-4906
+Scheda di reparto — giorno operativo 03, ore 05:44
+
+Il ricevitore di quartiere ha aperto la richiesta tecnica RT-2004 per il circuito AUX-2-014 di Ripetitore Cripta. Durante il controllo è stata verificata solo la continuità del cavo al banco. La prova di trasmissione esterna deve essere documentata in un verbale distinto; in questa scheda non è registrata una ricevuta esterna.
+
+L’operatore ha letto i riferimenti ad alta voce durante la consegna. Il presidio ha confermato la ricezione della nota, senza aggiungere misure tecniche.

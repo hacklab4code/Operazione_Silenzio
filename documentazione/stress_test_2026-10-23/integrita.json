@@ -1,0 +1,32 @@
+{
+  "file_controllati": 1545,
+  "file_modificati": [],
+  "dati_registri_env_immutati": true,
+  "sha256_sorgenti": {
+    "backend/server.py": "637984b9a03b157a54b7d922dd234ddea5fd48367fd410cff2321d58e7abd8d1",
+    "backend/percorsi.py": "184bfb3c712a431eb46a0139ec3d18bcb8a3381b7b1bf912596d3d50ffe4609b",
+    "backend/tests/test_ciclo.py": "e5c4b620b3e20dfb6e80683d0da01dac29a90da07fa459e328081cc9feabfba9",
+    "backend/tests/test_strumenti.py": "b27060111549541d33d93d54b5b01003a5de843402d08c4890cb4e8e1e89e875",
+    "backend/tests/test_server.py": "b6402e341f98b652e2ccc8a6d35c273ec976f12eb00bb894f8934a8f5758cd67",
+    "backend/legacy/__init__.py": "1a7ace22033d785337f1f3e8b7eb8f35f96e1e68566d86521027d926901cb6d3",
+    "backend/legacy/day4_sql.py": "f7672ed4a37968a921adfd15f3539a5d597f38c0fc7bbc50cc5b0b347640163f",
+    "backend/interfaccia/pannello_database.py": "fa7b8562948d54eeb14d2d114f64231750142e9a32c544adc6a581ba694868ed",
+    "backend/interfaccia/fieldlink_data.py": "98967eef998976f4ca37ce8752fa8a1a4e580f02c0dd65e202772f21c1e3ee07",
+    "backend/interfaccia/schema_giorno4.py": "2d622f8e878e88328d4fe3399d8a83ab84a673a4a2402032924a9188dfbee2c7",
+    "backend/interfaccia/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/guardie/chat_capabilities.py": "29ef4af79ca9216f3c952bb0bb270e4af9870b8ff16735cf91b1da326244289b",
+    "backend/guardie/config.py": "ff80b74c901132a3f8c044945fd1ed8cf18a4ae82df98c87e2f7af77434d0ecf",
+    "backend/guardie/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/guardie/mission_clock.py": "d1eb4a9835161e7e9c70b24d580edab4245421d6778f1cceeb952ccaa190a14b",
+    "backend/guardie/agent_identity.py": "ec418cd6d09dc57d65f8ae514423ca265d50b2f5ac13a4833706f78254117e69",
+    "backend/agente/strumenti.py": "73bb35b7490fd24c2eeab480d063b132cf623933173468096ee13c0ccad219ea",
+    "backend/agente/modelli.py": "7b9cd545a755156142dfb61186cdc2418aa41c9bd7f407a847ebc621c2d6df77",
+    "backend/agente/__init__.py": "135b5e6444716e5fdfca84cb9c84c2a223d33018f057bf34ca19f450b206ecec",
+    "backend/agente/prompt.py": "30483faa1c610dbbceb73dc7e7685cc93d0f12f9bb929740566ff680eae2ab2a",
+    "backend/agente/ciclo.py": "10c8db13ff00136098148ef7add2e6c79455a8362a10f6315523de709aa1a996",
+    "backend/agente/__main__.py": "17f6b4bcacd4183557649ce0a77ab7f3668bc7058d7ff607dc1e447eb29b1f9f",
+    "backend/valutazione/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "backend/valutazione/prove_storia.py": "c9cbc87c9af0c252ad65e8f635d4cb356c889c135cc810a39d5ed51602fc7363"
+  },
+  "sorgenti_modificati_durante_prove": []
+}

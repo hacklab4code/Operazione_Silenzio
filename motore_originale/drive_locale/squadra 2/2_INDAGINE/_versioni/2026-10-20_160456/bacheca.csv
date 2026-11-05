@@ -1,0 +1,12 @@
+﻿id;n;affidabilita;tipo;chi;luoghi;orari;citazione
+G1-01;0;centrale;dichiarazione;;;;La città è in quarantena.
+G1-01;1;centrale;dichiarazione;;;;Gli infetti inseguono chi si muove nelle strade.
+G1-01;2;centrale;dichiarazione;;;;Siete l’unità investigativa della vostra zona.
+G1-01;3;centrale;dichiarazione;;;;Costruite un assistente per leggere le testimonianze.
+G1-01;4;centrale;dichiarazione;centrale;;;La centrale ordina ai superstiti di raggiungere i rifugi.
+G1-01;5;centrale;dichiarazione;;;;Tutto lo scenario è inventato.
+G1-02;0;testimone;dichiarazione;Dario Neri;;;Dario Neri ha lasciato un messaggio: «Conservate i registri originali. I riassunti della centrale non raccontano tutto».
+G1-02;1;testimone;fatto riportato;;;;La trasmissione si interrompe prima di indicare un luogo.
+G1-03;0;indizio tecnico;fatto riportato;;;;Due chiamate della centrale hanno la stessa pausa di tre secondi e la stessa frase finale.
+G1-03;1;indizio tecnico;ipotesi;;;;Potrebbe essere una registrazione.
+G1-03;2;indizio tecnico;ipotesi;;;;Questo dettaglio, da solo, non dimostra chi stia trasmettendo.

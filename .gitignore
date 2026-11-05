@@ -1,0 +1,9 @@
+.env
+.venv/
+backend/registri/diario_chat.jsonl
+backend/registri/rettifiche.json
+__pycache__/
+*.pyc
+node_modules/
+logs/
+.DS_Store

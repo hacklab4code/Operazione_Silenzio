@@ -1,0 +1,2 @@
+# Per il pacchetto completo usare la lista comune.
+-r ../requirements-portatile.txt

@@ -1,0 +1,7 @@
+ARCHIVIO LAZZARO — Unità 2
+Documento: LX2-8047
+Scorte e approvvigionamenti — giorno operativo 03, ore 08:34
+
+Controllo del banco di Officina Cava: il servizio trasporti dispone di 10 unità di custodie non schermate. La scheda INV-2038 appartiene alla manutenzione ordinaria della rete secondaria. Sono esclusi i moduli sigillati trasportati dai corrieri. I materiali danneggiati vengono contati su un foglio distinto.
+
+Il registro viene usato per ricostruire i movimenti della rete secondaria. Gli orari si riferiscono alla centrale, salvo diversa indicazione nel corpo del documento.

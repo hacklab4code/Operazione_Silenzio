@@ -1,0 +1,6 @@
+1_DOCUMENTI — NON MODIFICARE
+
+Qui mettete SOLO i file ricevuti dal docente, nella sottocartella del giorno (giorno_1 … giorno_5).
+Non rinominate, non modificate, non cancellate. Il programma li legge, ne conserva una copia di sicurezza
+(2_INDAGINE/_cassaforte) e vi avvisa se qualcosa cambia o sparisce.
+Per lavorarci sopra usate le copie in 2_INDAGINE/copie_documenti.

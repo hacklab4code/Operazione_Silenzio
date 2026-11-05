@@ -1,0 +1,8 @@
+# Modello locale (facoltativo ma consigliato: serve per il bonus velocità "solo CPU" e come riserva senza internet)
+# llama.cpp con ruote precompilate per CPU (Windows, macOS, Linux)
+--extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+--prefer-binary
+llama-cpp-python
+huggingface_hub
+# Riserva se llama-cpp-python non si installa (più pesante e più lento su CPU):
+#   pip install "transformers>=4.45,<5" torch

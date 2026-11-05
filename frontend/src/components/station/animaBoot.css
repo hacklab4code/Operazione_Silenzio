@@ -1,0 +1,77 @@
+.anima-boot {
+  --anima-ink: var(--fl-green);
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 740px;
+}
+
+.anima-boot.is-silent { --anima-ink: #e6b15a; }
+.anima-boot-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.anima-boot .fieldlink-boot-status { font-size: 10px; letter-spacing: .18em; animation-delay: .18s; }
+.anima-boot-unit { color: var(--anima-ink); opacity: .5; font: 9px/1 "JetBrains Mono", monospace; letter-spacing: .18em; white-space: nowrap; animation: anima-detail-in .6s ease-out .3s both; }
+.anima-boot-identity { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 222px; }
+.anima-boot-wordmark { min-width: 0; padding-block: 25px; }
+.anima-boot h1 { margin: 0; overflow: visible; animation: none; }
+.anima-boot h1::after { display: none; }
+.anima-boot-letters { display: flex; }
+.anima-boot-letters > span { display: inline-block; opacity: 0; animation: anima-letter-lock .78s cubic-bezier(.16, 1, .3, 1) both; animation-delay: calc(.35s + var(--letter) * .12s); }
+.anima-boot .fieldlink-agent-definition { margin-top: 19px; color: hsl(var(--fl-hue, 145) 24% 88%); font-size: 17px; font-weight: 500; line-height: 1.55; animation: anima-detail-in .7s ease-out 1.05s both; }
+
+.anima-core { position: relative; flex: 0 0 220px; color: var(--anima-ink); text-align: center; animation: anima-core-in 1.2s cubic-bezier(.16, 1, .3, 1) both; }
+.anima-core svg { display: block; width: 100%; overflow: visible; }
+.anima-core-guides { opacity: .25; stroke-width: .7; }
+.anima-core-orbit { transform-origin: 120px 120px; }
+.anima-core-orbit-outer { opacity: .85; stroke-width: 1.4; animation: anima-orbit 24s linear infinite; }
+.anima-core-orbit-inner { opacity: .45; stroke-width: .8; animation: anima-orbit 32s linear infinite reverse; }
+.anima-core-network { opacity: .38; }
+.anima-core-network > path { stroke-dasharray: 1; animation: anima-network-in 1.6s ease-out .25s both; }
+.anima-core-node { animation: anima-node-in .7s ease-out both; animation-delay: calc(.6s + var(--node) * .12s); }
+.anima-core-nucleus { transform-origin: 120px 120px; animation: anima-breathe 4s ease-in-out 1.6s infinite; }
+.anima-core-pulse { transform-origin: 120px 120px; animation: anima-pulse 1.5s ease-out .4s 2 both; }
+.anima-core-signal { stroke-dasharray: 90; animation: anima-signal-in 1s ease-out .8s both; }
+.anima-core-caption { display: block; margin-top: -1px; color: var(--anima-ink); font: 8px/1.5 "JetBrains Mono", monospace; letter-spacing: .22em; opacity: .65; animation: anima-detail-in .6s ease-out 1.25s both; }
+.anima-boot.is-silent .anima-core-network { opacity: .18; }
+.anima-boot.is-silent .anima-core-signal { opacity: .4; }
+
+@keyframes anima-core-in {
+  from { opacity: 0; transform: scale(.72) rotate(-18deg); filter: blur(9px); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+@keyframes anima-letter-lock {
+  0% { opacity: 0; transform: translateY(18px); filter: blur(8px); }
+  45% { opacity: 1; text-shadow: -3px 0 var(--anima-ink), 3px 0 hsl(var(--fl-hue, 160) 80% 70% / .45); }
+  62% { transform: translateY(-2px); text-shadow: 2px 0 var(--anima-ink); }
+  100% { opacity: 1; transform: none; filter: blur(0); text-shadow: 0 0 28px hsl(var(--fl-hue, 160) 70% 60% / .12); }
+}
+@keyframes anima-detail-in { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+@keyframes anima-network-in { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes anima-node-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes anima-orbit { to { transform: rotate(360deg); } }
+@keyframes anima-breathe { 50% { opacity: .6; transform: scale(.88); } }
+@keyframes anima-pulse { from { opacity: .6; transform: scale(.55); } to { opacity: 0; transform: scale(2.5); } }
+@keyframes anima-signal-in { from { stroke-dashoffset: 90; opacity: 0; } to { stroke-dashoffset: 0; opacity: 1; } }
+
+@media (max-width: 800px) {
+  .anima-core { flex-basis: 170px; }
+  .anima-boot-identity { min-height: 190px; gap: 12px; }
+  .anima-boot h1 { font-size: clamp(42px, 7.6vw, 64px); }
+}
+@media (max-width: 540px) {
+  .anima-boot-heading { gap: 8px; }
+  .anima-boot .fieldlink-boot-status { font-size: 8px; letter-spacing: .1em; gap: 7px; }
+  .anima-boot-unit { font-size: 7px; letter-spacing: .08em; }
+  .anima-boot-identity { min-height: 156px; gap: 0; }
+  .anima-boot-wordmark { position: relative; z-index: 1; padding-block: 25px 10px; }
+  .anima-boot h1 { font-size: clamp(38px, 9vw, 48px); }
+  .anima-boot.is-silent h1 { max-width: 8ch; font-size: 30px; }
+  .anima-boot .fieldlink-agent-definition { margin-top: 13px; font-size: 13px; }
+  .anima-core { flex-basis: 104px; margin-left: -28px; align-self: flex-start; margin-top: 7px; }
+  .anima-core-caption { font-size: 6px; letter-spacing: .08em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anima-boot *, .anima-boot *::after { animation: none !important; }
+  .anima-boot-letters > span { opacity: 1; }
+  .anima-core-pulse { display: none; }
+}

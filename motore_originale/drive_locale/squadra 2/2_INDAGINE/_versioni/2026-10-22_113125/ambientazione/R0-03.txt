@@ -1,0 +1,7 @@
+ID R0-03
+TIPO ambientazione
+La squadra
+
+La squadra lavora con quattro ruoli. Il Bibliotecario custodisce i documenti. L'Investigatore ragiona sulle prove.
+Il Tecnico usa gli strumenti: cifrari, linea del tempo, legami, confronti, mappa, audio e immagini. Marco Ferri racconta via radio e coordina gli altri.
+Tutto lo scenario è inventato.

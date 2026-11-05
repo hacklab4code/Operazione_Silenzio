@@ -1,0 +1,8 @@
+2_INDAGINE — SI PUÒ MODIFICARE
+
+copie_documenti/  copie dei file del docente: leggete, annotate, sperimentate liberamente
+lavoro/           memoria degli agenti, cache, diario, benchmark (salvati in automatico)
+esperimenti/      prove, prompt alternativi, test
+appunti_squadra/  note della squadra
+_versioni/        versioni precedenti del lavoro (mai cancellate)
+_cassaforte/ e _registro/  gestite dal sistema: non toccatele

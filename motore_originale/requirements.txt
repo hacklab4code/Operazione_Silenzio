@@ -1,0 +1,5 @@
+# Pacchetti base (obbligatori): interfaccia, motori cloud, download dal link
+gradio>=5,<6
+openai>=1.40
+anthropic>=0.40
+gdown>=5

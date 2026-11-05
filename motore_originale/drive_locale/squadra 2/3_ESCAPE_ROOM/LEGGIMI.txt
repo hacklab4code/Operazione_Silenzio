@@ -1,0 +1,5 @@
+3_ESCAPE_ROOM — CONSEGNA FINALE
+
+Ogni consegna è una cartella vNN_data con il gioco completo e un MANIFEST.json (impronte dei file).
+Si crea solo con il comando: python operazione_silenzio.py consegna --conferma Le versioni non si sovrascrivono.
+La versione da valutare è quella con il numero più alto.

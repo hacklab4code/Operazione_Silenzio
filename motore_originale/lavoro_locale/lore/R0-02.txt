@@ -1,7 +1,0 @@
-ID R0-02
-TIPO ambientazione
-Rete di analisi della Capitale
-
-La console collega la squadra ad A.N.I.M.A., rete di analisi dedicata all’indagine nella Capitale.
-La collocazione fisica dei server non è specificata. L’interfaccia radio è il canale di comunicazione del sistema.
-Lo stato del collegamento non dimostra eventi del caso né la posizione di persone.

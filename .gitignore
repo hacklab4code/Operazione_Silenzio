@@ -7,3 +7,7 @@ __pycache__/
 node_modules/
 logs/
 .DS_Store
+frontend/build/**/*.map
+motore_originale/drive_locale/
+motore_originale/lavoro_locale/*
+!motore_originale/lavoro_locale/bacheca.json

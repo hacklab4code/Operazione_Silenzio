@@ -1,7 +1,0 @@
-ARCHIVIO LAZZARO — Unità 2
-Documento: LX2-9079
-Scheda di reparto — giorno operativo 03, ore 06:14
-
-Il unità portatile ha aperto la richiesta tecnica RT-2034 per il circuito AUX-2-044 di Ripetitore Cripta. Durante il controllo è stata verificata solo la continuità del cavo al banco. La prova di trasmissione esterna deve essere documentata in un verbale distinto; in questa scheda non è registrata una ricevuta esterna.
-
-Il documento conserva la descrizione originale della squadra sul posto. Nel riepilogo del cambio turno sono riportati soltanto numero di pratica e materiale ricevuto.

@@ -173,7 +173,7 @@ Operazione_Silenzio/
 │   └── valutazione/           prove dal vivo sulla storia (consumano quota)
 ├── frontend/                  React: src/ (sorgenti) e build/ (servita dal server)
 ├── demo/                      demo_riserva.py (tool senza modello) · demo_varco.py (soluzione V-29)
-├── motore_originale/          motore e notebook dei giorni 1-2 (solo la bacheca è ancora letta)
+├── motore_originale/          programma e notebook dei giorni 1-2; la chat legge solo lavoro_locale/bacheca.json
 ├── documentazione/            FUNZIONAMENTO.md · STORIA.md · rapporti_giornalieri/
 └── logs/                      backend.log, server_riavvio.log
 ```

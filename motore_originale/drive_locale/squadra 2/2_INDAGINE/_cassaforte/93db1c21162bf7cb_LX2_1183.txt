@@ -1,7 +1,0 @@
-ARCHIVIO LAZZARO — Unità 2
-Documento: LX2-1183
-Scorte e approvvigionamenti — giorno operativo 03, ore 09:43
-
-Controllo del banco di Officina Cenotafio: il unità portatile dispone di 13 unità di bobine di cavo. La scheda INV-2041 appartiene alla manutenzione ordinaria della rete secondaria. Sono esclusi i moduli sigillati trasportati dai corrieri. I materiali danneggiati vengono contati su un foglio distinto.
-
-Il registro viene usato per ricostruire i movimenti della rete secondaria. Gli orari si riferiscono alla centrale, salvo diversa indicazione nel corpo del documento.

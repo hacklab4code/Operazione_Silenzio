@@ -87,7 +87,7 @@ Operazione_Silenzio/
 │
 ├── frontend/                   interfaccia React; build/ è servita dal server (src/ per modificarla)
 ├── demo/                       demo_riserva.py (tool senza modello) · demo_varco.py (soluzione V-29)
-├── motore_originale/           motore del notebook dei giorni 1-2 (bacheca, memoria): non usato in chat
+├── motore_originale/           programma e notebook dei giorni 1-2; la chat legge solo lavoro_locale/bacheca.json
 ├── documentazione/             FUNZIONAMENTO.md (come funzionano bot e backend) · STORIA.md (storia con prove) · rapporti giornalieri
 └── logs/                       log del server
 ```

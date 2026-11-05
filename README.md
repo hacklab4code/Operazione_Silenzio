@@ -56,6 +56,7 @@ Non c'è un indice costruito all'avvio. Un file messo in `dati/giorno_N/` è vis
 | Ciclo modello ↔ tool | `backend/agente/ciclo.py` |
 | Tool, sentinella, SQL in sola lettura | `backend/agente/strumenti.py` |
 | Percorso guidato della vetrina | `backend/vetrina/simulazione.py` |
+| Motore dei giorni 1-2 | `motore_originale/` (programma, notebook, bacheca) |
 | Interfaccia | `frontend/src` |
 | Caso, giorno per giorno | `documentazione/STORIA.md` |
 | Architettura per esteso | `documentazione/FUNZIONAMENTO.md` |

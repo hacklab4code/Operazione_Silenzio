@@ -1,7 +1,0 @@
-ID R0-02
-TIPO ambientazione
-Il cantiere sotto Piazza Venezia
-
-Il cantiere della stazione Venezia della Metro C scende sotto il livello delle strade antiche di Roma.
-Nei tunnel ci sono reperti, gallerie di servizio, pozzi di aerazione e passaggi chiusi da grate. La radio funziona meglio vicino ai pozzi di aerazione.
-Dai tunnel si sentono rumori dalla superficie: sirene, passi, colpi sulle grate.

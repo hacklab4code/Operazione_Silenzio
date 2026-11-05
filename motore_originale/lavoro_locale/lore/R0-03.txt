@@ -1,7 +1,0 @@
-ID R0-03
-TIPO ambientazione
-La squadra
-
-Il Bibliotecario custodisce i documenti. L’Investigatore ragiona sulle prove.
-Il Tecnico usa gli strumenti di analisi. A.N.I.M.A. coordina le risposte alla squadra.
-Questa descrizione del sistema non è una prova dell’indagine. Tutto lo scenario è inventato.

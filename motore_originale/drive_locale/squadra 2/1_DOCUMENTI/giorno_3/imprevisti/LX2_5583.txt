@@ -1,7 +1,0 @@
-ARCHIVIO LAZZARO — Unità 2
-Documento: LX2-5583
-Registro di funzionamento — giorno operativo 01, ore 10:58
-
-Il servizio trasporti ha ricevuto una trasmissione regolare da Ripetitore Rovo. La prova è stata eseguita prima del cambio turno del giorno 01. Il segnale di riscontro è ST-2034. Sono state annotate alimentazione presente e ricezione stabile. Il quadro non è stato ricontrollato dopo questa prova.
-
-Il referente di turno ha conservato la copia cartacea. Le comunicazioni successive saranno registrate separatamente; questo documento descrive soltanto l’evento indicato.

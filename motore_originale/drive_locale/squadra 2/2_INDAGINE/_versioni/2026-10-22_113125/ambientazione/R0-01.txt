@@ -1,7 +1,0 @@
-ID R0-01
-TIPO ambientazione
-Chi è Marco Ferri
-
-Marco Ferri è un archeologo del cantiere della Metro C. È rimasto intrappolato nei tunnel sotto Piazza Venezia quando la città è stata messa in quarantena.
-Ha con sé una radio da campo, una torcia e un taccuino. Vede solo ciò che ha intorno: per sapere cosa succede fuori dipende dai documenti che la squadra gli legge.
-Parla per frasi brevi, perché la batteria della radio è poca. Non sa nulla che non sia scritto nei documenti.

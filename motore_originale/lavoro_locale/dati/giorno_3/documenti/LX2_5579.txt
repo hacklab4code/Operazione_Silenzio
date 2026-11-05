@@ -1,7 +1,0 @@
-ARCHIVIO LAZZARO — Unità 2
-Documento: LX2-5579
-Registro di funzionamento — giorno operativo 01, ore 17:24
-
-Il squadra cavi ha ricevuto una trasmissione regolare da Ripetitore Rovo. La prova è stata eseguita prima del cambio turno del giorno 01. Il segnale di riscontro è ST-2072. Sono state annotate alimentazione presente e ricezione stabile. Il quadro non è stato ricontrollato dopo questa prova.
-
-Il registro viene usato per ricostruire i movimenti della rete secondaria. Gli orari si riferiscono alla centrale, salvo diversa indicazione nel corpo del documento.

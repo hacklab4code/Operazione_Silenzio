@@ -2,6 +2,18 @@
 
 School project by Squadra 2 at ITS Lazio Digital Academy. A tool-using investigative agent works a fictional five-day case. The public demo needs no API key: the tools read the real files, and the answers follow a guided reconstruction of the case.
 
+La demo si apre nel browser, senza clone e senza chiave: [progettosilenzio.hacklab.digital](https://progettosilenzio.hacklab.digital).
+
+Da questo repository, per avviarla sul proprio computer:
+
+```sh
+git clone https://github.com/hacklab4code/Operazione_Silenzio.git
+cd Operazione_Silenzio
+python3 avvia.py
+```
+
+Si apre <http://127.0.0.1:3000>. Senza `backend/.env` parte la vetrina simulata.
+
 A.N.I.M.A. è l'agente della Squadra 2. A ogni domanda non conosce il caso. Può cercare nei documenti, leggerli e interrogare i database in quel momento, e la risposta deve citare solo ciò che quegli strumenti hanno mostrato.
 
 Il caso, Operazione Silenzio, è inventato. Una città in quarantena, registri che contraddicono la centrale, un archivio sepolto, un database senza nomi di tabella, un ultimo ordine da non eseguire.

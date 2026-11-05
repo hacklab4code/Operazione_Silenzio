@@ -8,16 +8,27 @@ const PERCORSO_LOCALE = [
   { id: "ultima", giorno: 5, titolo: "Non obbedire a ECO", domanda: "Dobbiamo eseguire l'ordine di G5-01 e portare il contenitore al forno? Di chi fidarci, e cosa facciamo con LUME?", perche: "I tre documenti finali." },
 ];
 
-export default function FieldlinkVetrina({ onAsk, busy, simulata, motivo }) {
+export default function FieldlinkVetrina({ onAsk, busy, simulata, statico, motivo }) {
   const [scheda, setScheda] = useState("lavoro");
   const [percorso, setPercorso] = useState(PERCORSO_LOCALE);
 
   useEffect(() => {
     let attivo = true;
-    fetch("/api/vetrina")
-      .then((risposta) => (risposta.ok ? risposta.json() : null))
-      .then((dati) => { if (attivo && dati?.percorso?.length) setPercorso(dati.percorso); })
-      .catch(() => {});
+    (async () => {
+      try {
+        const risposta = await fetch("/api/vetrina");
+        if (risposta.ok) {
+          const dati = await risposta.json();
+          if (attivo && dati?.percorso?.length) { setPercorso(dati.percorso); return; }
+        }
+      } catch { /* la pagina pubblica non ha il server Python */ }
+      try {
+        const risposta = await fetch("/vetrina-static.json");
+        if (!risposta.ok) return;
+        const dati = await risposta.json();
+        if (attivo && dati?.percorso?.length) setPercorso(dati.percorso);
+      } catch { /* resta il percorso ridotto */ }
+    })();
     return () => { attivo = false; };
   }, []);
 
@@ -74,7 +85,7 @@ export default function FieldlinkVetrina({ onAsk, busy, simulata, motivo }) {
                 <li><span>5</span><div><strong>Il controllo</strong><p>Un identificativo tra parentesi quadre conta solo se è comparso nei risultati. Se non c'è una chiave, questa vetrina esegue gli stessi tool e usa la sintesi già scritta dalla squadra.</p></div></li>
               </ol>
               <h3>Perché la demo è simulata</h3>
-              <p>Un modello a pagamento non può stare in un repository pubblico, e senza rete la chat non deve restare muta. Nella vetrina la ricerca è vera: i file in <code>dati/</code> vengono letti adesso. Il paragrafo di risposta, invece, è il percorso del caso, non una generazione nuova. Con <code>ANIMA_MODALITA=live</code> e una chiave in <code>backend/.env</code> torna l'agente che scrive da solo.</p>
+              <p>Un modello a pagamento non può stare in un repository pubblico, e senza rete la chat non deve restare muta. Sul computer la ricerca è vera: i file in <code>dati/</code> vengono letti adesso. In questa pagina pubblica le stesse risposte sono già pronte, perché il browser non esegue Python. Il paragrafo è il percorso del caso, non una generazione nuova. Con <code>ANIMA_MODALITA=live</code> e una chiave in <code>backend/.env</code> torna l'agente che scrive da solo.</p>
               <h3>Limite detto in chiaro</h3>
               <p>Il varco V-29 incrocia dodici tabelle senza nome. Il modello, da solo e con la quota gratuita, trova il varco ma non chiude tutte le regole. In demo si usa la query scritta dalla squadra, <code>verifica_varco</code>, che è quella lanciata dalla trasmissione omonima.</p>
             </div>
@@ -83,7 +94,7 @@ export default function FieldlinkVetrina({ onAsk, busy, simulata, motivo }) {
 
         <aside className="vetrina-percorso" aria-label="Trasmissioni del caso">
           <h3>Trasmissioni <em>{String(percorso.length).padStart(2, "0")}</em></h3>
-          <p>Aprono la console sul percorso guidato. I tool leggono i file veri; il testo è la ricostruzione della squadra.</p>
+          <p>{statico ? "Aprono la console sul percorso guidato. Qui le risposte sono già pronte, preparate sui documenti del caso." : "Aprono la console sul percorso guidato. I tool leggono i file veri; il testo è la ricostruzione della squadra."}</p>
           <ol>
             {percorso.map((voce) => (
               <li key={voce.id}>

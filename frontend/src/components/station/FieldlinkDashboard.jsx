@@ -116,6 +116,28 @@ async function streamReply(body, onChunk, onMetadata) {
   }
 }
 
+let pacchettoStatico = null;
+let richiestaPacchetto = null;
+
+function caricaPacchettoStatico() {
+  if (pacchettoStatico) return Promise.resolve(pacchettoStatico);
+  if (!richiestaPacchetto) {
+    richiestaPacchetto = fetch(`${BACKEND}/vetrina-static.json`)
+      .then((risposta) => (risposta.ok ? risposta.json() : null))
+      .then((pacchetto) => { pacchettoStatico = pacchetto; return pacchetto; })
+      .catch(() => null);
+  }
+  return richiestaPacchetto;
+}
+
+async function riproduciStatico(testo, onChunk, onMetadata) {
+  onMetadata?.({ engine: "vetrina_simulata", model: "vetrina guidata", respondent_mode: "single" });
+  for (let i = 0; i < testo.length; i += 220) {
+    onChunk(testo.slice(i, i + 220));
+    await new Promise((resolve) => { window.setTimeout(resolve, 12); });
+  }
+}
+
 export default function FieldlinkDashboard({ hidden, quality = 100, frequency, setFrequency, frequencyTuning = false, unlocked, fresh, activity, section = "radio", onDanger, onGroqSaturated, onOpen }) {
   const [sessionId] = useState(() => `sess-${window.crypto.randomUUID()}`);
   const [messages, setMessages] = useState([{ role: "marco", text: OPENING, time: clockTime() }]);
@@ -221,6 +243,7 @@ export default function FieldlinkDashboard({ hidden, quality = 100, frequency, s
   const [groqSaturated, setGroqSaturated] = useState(false);
   const [showcase, setShowcase] = useState(null);
   const groqWasSaturated = useRef(false);
+  const serverRaggiunto = useRef(false);
   const logRef = useRef(null);
   const responseStartedAt = useRef(null);
   const inputRef = useRef(null);
@@ -288,9 +311,10 @@ export default function FieldlinkDashboard({ hidden, quality = 100, frequency, s
     const refreshGroqStatus = async () => {
       try {
         const response = await fetch(`${BACKEND}/api/health`);
-        if (!response.ok) return;
+        if (!response.ok) throw new Error("servizio assente");
         const status = await response.json();
         if (active) {
+          serverRaggiunto.current = true;
           const saturated = Boolean(status.backend?.groq?.saturo);
           setGroqSaturated(saturated);
           setShowcase(status.vetrina || null);
@@ -298,7 +322,11 @@ export default function FieldlinkDashboard({ hidden, quality = 100, frequency, s
           groqWasSaturated.current = saturated;
         }
       } catch {
-        // Se lo stato non è raggiungibile, mantieni l'ultimo indicatore noto.
+        if (!active || serverRaggiunto.current) return;
+        const pacchetto = await caricaPacchettoStatico();
+        if (active && pacchetto) {
+          setShowcase({ simulata: true, statico: true, motivo: pacchetto.motivo, percorso: pacchetto.percorso });
+        }
       }
     };
     refreshGroqStatus();
@@ -333,7 +361,19 @@ export default function FieldlinkDashboard({ hidden, quality = 100, frequency, s
     let failed = false;
     let responseSeconds;
     try {
-      await streamReply({ session_id: sessionId, message: question, history, ...responsePreferences, guided: Boolean(extra.guided) }, (chunk) => {
+      const pacchetto = serverRaggiunto.current ? null : await caricaPacchettoStatico();
+      if (pacchetto) {
+        const testo = pacchetto.risposte?.[question] || pacchetto.fallback || "";
+        await riproduciStatico(testo, (chunk) => {
+          answer += chunk;
+          if (!receiving) { receiving = true; setPhase("rx"); }
+          setMessages((current) => {
+            const last = current[current.length - 1];
+            if (last?.role === "marco" && last.pending) return [...current.slice(0, -1), { ...last, text: answer }];
+            return [...current, { role: "marco", respondent, text: answer, time: clockTime(), pending: true }];
+          });
+        }, (metadata) => { replyMetadata = { ...replyMetadata, ...metadata }; respondent = metadata.respondent_mode === "team" ? "team" : "marco"; });
+      } else await streamReply({ session_id: sessionId, message: question, history, ...responsePreferences, guided: Boolean(extra.guided) }, (chunk) => {
         answer += chunk;
         if (!receiving) { receiving = true; setPhase("rx"); }
         setMessages((current) => {
@@ -565,7 +605,7 @@ export default function FieldlinkDashboard({ hidden, quality = 100, frequency, s
                 </div>
               </footer>
             </div>
-          </> : section === "vetrina" ? <FieldlinkVetrina busy={busy} simulata={Boolean(showcase?.simulata)} motivo={showcase?.motivo || ""} onAsk={(question) => { openSection("radio"); send(question, { guided: true }); }} /> : <FieldlinkSectionPage section={section} unlocked={unlocked} fresh={fresh} activity={activity} onOpen={openSection} query={queryContext} documents={liveDocuments} />}
+          </> : section === "vetrina" ? <FieldlinkVetrina busy={busy} simulata={Boolean(showcase?.simulata)} statico={Boolean(showcase?.statico)} motivo={showcase?.motivo || ""} onAsk={(question) => { openSection("radio"); send(question, { guided: true }); }} /> : <FieldlinkSectionPage section={section} unlocked={unlocked} fresh={fresh} activity={activity} onOpen={openSection} query={queryContext} documents={liveDocuments} />}
         </div>
         </PageHeaderTarget.Provider>
       </section>

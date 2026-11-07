@@ -2,7 +2,7 @@
 
 School project by Squadra 2 at ITS Lazio Digital Academy. A tool-using investigative agent works a fictional five-day case. The public demo needs no API key: the tools read the real files, and the answers follow a guided reconstruction of the case.
 
-La demo si apre nel browser, senza clone e senza chiave: [progettosilenzio.hacklab.digital](https://progettosilenzio.hacklab.digital).
+La demo si apre nel browser, senza clone e senza chiave: [hacklab4code.github.io/Operazione_Silenzio](https://hacklab4code.github.io/Operazione_Silenzio/).
 
 Da questo repository, per avviarla sul proprio computer:
 
